@@ -94,32 +94,42 @@
                     })
                     .finally();
             }
-        },
+        },  
         updated: function () {
             $(".chessnode").draggable({
                 start: function (event, ui) {
-
+                    console.log('x=' + ui.position.top + '  y=' + ui.position.left);
                 },
                 drag: function () {
 
                 },
-                stop: function (event, ui) {
+                stop: async function (event, ui) {
                     //console.log('x=' + ui.position.top + '  y=' + ui.position.left);
                     var movelist = [{ id: this.id, top: ui.position.top, left: ui.position.left, visible: true }];
-
                     var res = axios.post('/api/chess/movenode', movelist).then(response => {
                         //this.chessRoom = response.data.data;
-                        //alert(response);
-
+                        //alert(response.data);
+                        //console.log(response.data.message);
+                        return response.data.message;
                     })
                         .catch(error => {
                             console.log(error)
                         })
                         .finally();
-
+                    
+                },
+                revert: function (response) {
+                    if (!response)
+                        return true;
                 }
             });
         },
+        checkmove: function () {
+            $(".chessnode").draggable({
+                revert:  true
+            })
+        },
+
         mounted: function () {
             var chat = $.connection.requestlog;
             $.connection.hub.start().done(function () {
