@@ -7,6 +7,7 @@ namespace DemoAPI.Models
 {
     public class RoomModel
     {
-        public string RoomName { get; set; }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
     }
 }

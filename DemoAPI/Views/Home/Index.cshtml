@@ -2,6 +2,8 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="/Scripts/jquery.signalR-2.4.2.js"></script>
 <script src="/signalr/hubs"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-advanced-chat@0.8.8/dist/vue-advanced-chat.min.js"></script>
 <style>
     .chessboard {
         width: 850px;
@@ -23,7 +25,6 @@
 </style>
 
 
-
 <div id="app">
     <div class="chessboard">
         <div v-for="item in chessNode" v-if="item !== null">
@@ -32,7 +33,16 @@
             </div>
         </div>
     </div>
-    {{ message }}
+    <div>
+        <input v-model="mess" type="text" id="mess" placeholder="nhap tin nhan" />
+        <input v-on:click="sendMessage" type="button" value="Gui tin nhan" />
+    </div>
+    <ul>
+        <li id="message"></li>
+    </ul>
+    <ul>
+        {{ message }}
+    </ul>
     total record: {{total}}
     <input v-on:click="getTotal" type="button" value="get total" />
     List Student
@@ -51,8 +61,14 @@
     <div>
         <ul id="discussion"></ul>
     </div>
+
+
 </div>
+
+
+
 <script>
+
     var stObject = {};
 
     var app = new Vue({
@@ -62,6 +78,7 @@
             total: 0,
             students: [],
             classRoom: '',
+            mess: [],
             chessNode: []
         },
         methods: {
@@ -78,10 +95,26 @@
                     })
                     .finally()
             },
+            sendMessage() {
+                var mess = document.getElementById("mess").value;
+                axios.post('/api/chess/getMess?mess=' + mess).then(Response => {
+                    document.getElementById("message").innerHTML += "<li>" + Response.data.message+ "</li>";
+                }).catch(error => {
+                    console.log(error)
+                })
+                    .finally()
+            },
             insertClassRoom() {
                 var payload = { Name: this.classRoom };
-                var res = axios.post('/api/ClassRoom/insertClassRoom', payload);
-                console.log(res.data);
+                var res = axios.post('/api/ClassRoom/insertClassRoom', payload)
+                    .then(response => {
+                        //console.log(res.data);
+                        console.log(response.data.message);
+                    })
+                    .catch(error => {
+                        console.log(error)
+                    })
+                    .finally();
             },
             getchessNode() {
                 var res = axios.post('/api/chess/getchessnode').then(response => {
@@ -94,7 +127,7 @@
                     })
                     .finally();
             }
-        },  
+        },
         updated: function () {
             $(".chessnode").draggable({
                 start: function (event, ui) {
@@ -118,18 +151,13 @@
                             console.log(error)
                         })
                         .finally();
-                    
+
                 },
                 revert: function (response) {
                     if (!response)
                         return true;
                 }
             });
-        },
-        checkmove: function () {
-            $(".chessnode").draggable({
-                revert:  true
-            })
         },
 
         mounted: function () {
@@ -152,6 +180,10 @@
                 }
             };
             this.getchessNode();
-        }
+        },
+
+
     })
+
 </script>
+

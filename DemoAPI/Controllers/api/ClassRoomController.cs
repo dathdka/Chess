@@ -12,29 +12,29 @@ namespace DemoAPI.Controllers.api
         ApplicationDbContext _dbContext = new ApplicationDbContext();
         [HttpPost]
         [Route("api/ClassRoom/insertClassRoom")]
-        public ActionResult getbyId1(ClassRoomModel clRoom)
+        public ActionResult getbyId1(RoomModel clRoom)
         {
             try
             {
-                ClassRoom cl = new ClassRoom();
+                Room cl = new Room();
                 cl.Name = clRoom.Name;
                 cl.Id = Guid.NewGuid();
-                _dbContext.ClassRoom.Add(cl);
+                _dbContext.Room.Add(cl);
                 _dbContext.SaveChanges();
                 return
                 Json(new
                 {
                     status = true,
-                    message = "",
+                    message = "them thanh cong",
                     data = cl
                 });
-            }
+             }
             catch (Exception ex) {
                 return
                 Json(new
                 {
                     status = false,
-                    message = ""
+                    message = ex.Message
                 });
             }
         }

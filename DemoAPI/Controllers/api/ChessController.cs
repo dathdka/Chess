@@ -11,6 +11,15 @@ namespace DemoAPI.Controllers.api
 {
     public class ChessController: Controller
     {
+        public MoveModel[,] board = new MoveModel[8,9];
+        public void Init ()
+        {
+            board[2, 1] = new phao("phaoden1",2,1);
+            board[2, 7] = new phao("phaoden2",2,7);
+            board[7, 1] = new phao("phaodo1",7,1);
+            board[7, 7] = new phao("phaodo2",7,7);
+        }
+
         ChessService chessService = new ChessService();
         
         [Route("api/chess/insertroom")]
@@ -19,7 +28,7 @@ namespace DemoAPI.Controllers.api
         {
             Room r = new Room();
             r.Id = Guid.NewGuid();
-            r.Name = rmodel.RoomName;
+            r.Name = rmodel.Name;
             chessService.insertRoom(r);
             return
             Json(new
@@ -47,6 +56,7 @@ namespace DemoAPI.Controllers.api
             string chessJson = System.IO.File.ReadAllText(Server.MapPath("/Data/ChessJson.txt"));
             System.Web.Script.Serialization.JavaScriptSerializer js = new System.Web.Script.Serialization.JavaScriptSerializer();
             List<ChessNode> chessnode = js.Deserialize<List<ChessNode>>(chessJson);
+            Init();
             return Json(new
             {
                 message = "success",
@@ -79,5 +89,19 @@ namespace DemoAPI.Controllers.api
                     message = false
                 }, JsonRequestBehavior.AllowGet);
         }
+        [Route("api/chess/getMess")]
+        [HttpPost]
+        public ActionResult sendMessage(String mess)
+        {
+
+            Requestlog.PostToClient(mess);
+            return
+            Json(new
+            {
+                message = mess,
+               
+            }, JsonRequestBehavior.AllowGet);
+        }
+        
     }
 }

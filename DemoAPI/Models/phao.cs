@@ -7,32 +7,27 @@ namespace DemoAPI.Models
 {
     public class phao : MoveModel
     {
-        public int curtop = 0;
-        public int curleft = 0;
-        // check range
-        public int isWithin(int value)
-        {
-            int step = value / 75;
-            int isNegative = value > 0 ? 1 : -1;
-            if (Math.Abs(value) > Math.Abs(step) * 75 + 55)
-                return 75 * (step + 1*isNegative); 
-            else if(Math.Abs( value) <= Math.Abs( step) * 75 + 20)
-                return 75 * step;
-            return -1;
-        }
+        
 
+        public int x { get; set; }
+        public int y { get; set; }
+        
+        public phao(string id, int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+            this.id = id;
+        }
+        public phao() { }
         //check buoc di
         public MoveModel checkMove(MoveModel node)
         {
-            
             if(isWithin(node.top) !=-1 && isWithin(node.left) != -1)
             {
                 node.top = isWithin(node.top);
                 node.left = isWithin(node.left);
                 node.canMove = true;
-                return node;
             }
-            node.canMove = false;
             return node;
         }
     }
