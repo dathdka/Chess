@@ -98,19 +98,21 @@
         updated: function () {
             $(".chessnode").draggable({
                 start: function (event, ui) {
-                    console.log('x=' + ui.position.top + '  y=' + ui.position.left);
+                    console.log('start x=' + ui.position.top + '  y=' + ui.position.left);
                 },
                 drag: function () {
 
                 },
-                stop: async function (event, ui) {
+                stop: function (event, ui) {
                     //console.log('x=' + ui.position.top + '  y=' + ui.position.left);
                     var movelist = [{ id: this.id, top: ui.position.top, left: ui.position.left, visible: true }];
                     var res = axios.post('/api/chess/movenode', movelist).then(response => {
                         //this.chessRoom = response.data.data;
-                        //alert(response.data);
-                        //console.log(response.data.message);
-                        return response.data.message;
+                        console.log('drop  x=' + ui.position.top + '  y=' + ui.position.left);
+                        console.log('end   x=' + response.data.top + '  y=' + response.data.left);
+                        console.log(response.data.message);
+                        this[this.revert] = response.data.message;
+
                     })
                         .catch(error => {
                             console.log(error)

@@ -58,24 +58,25 @@ namespace DemoAPI.Controllers.api
         public ActionResult getMoveNode(List<MoveModel> movelist)
         {
             System.Web.Script.Serialization.JavaScriptSerializer js = new System.Web.Script.Serialization.JavaScriptSerializer();
-            tot t = new tot();
-            bool a =  t.checkMove(movelist.Last());
-
-            if (a)
+            phao t = new phao();
+            MoveModel temp =  t.checkMove(movelist.Last());
+            
+            if (temp.canMove)
             {
+                movelist.Last().top = temp.top;
+                movelist.Last().left = temp.left;
                 Requestlog.PostToClient(js.Serialize(movelist));
                 return Json(new
                 {
-
-                    message = true
+                    message = true,
+                    top = temp.top,
+                    left = temp.left
 
                 }, JsonRequestBehavior.AllowGet);
             }
-            else
                 return Json(new
                 {
                     message = false
-
                 }, JsonRequestBehavior.AllowGet);
         }
     }
