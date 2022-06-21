@@ -17,6 +17,7 @@ namespace DemoAPI.Models
             this.id = id;
         }
         public tuong() { }
+
         public MoveModel checkMove(MoveModel node)
         {
             if (isWithin(node.top) != -1 && isWithin(node.left) != -1)

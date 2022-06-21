@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "fIuDgp6OGYZhLxMpDp48ZHzoS2r025sG7fBIHIByh/bNJmx7MiJe7NU3CntqPfV1/qvLnqaJhwum1Vcsr0+TeA==",
+  "dgSpecHash": "YolETW5m2FSNXkl//rE+9H1dBAXd9P2ZSKZDqv1ED0ZiULmIRvtbGcrHqRBCsYQGrvuWN7emoHrdG8EiWYQKyw==",
   "success": true,
-  "projectFilePath": "D:\\Chess\\Lib\\Lib.csproj",
+  "projectFilePath": "C:\\Users\\User\\OneDrive\\Desktop\\Chess\\Lib\\Lib.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\DESKTOP\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
-    "C:\\Users\\DESKTOP\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
-    "C:\\Users\\DESKTOP\\.nuget\\packages\\microsoft.aspnet.identity.entityframework\\2.2.3\\microsoft.aspnet.identity.entityframework.2.2.3.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnet.identity.entityframework\\2.2.3\\microsoft.aspnet.identity.entityframework.2.2.3.nupkg.sha512"
   ],
   "logs": []
 }

@@ -218,20 +218,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DESKTOP\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Chess\\Lib\\Lib.csproj",
+      "projectUniqueName": "C:\\Users\\User\\OneDrive\\Desktop\\Chess\\Lib\\Lib.csproj",
       "projectName": "Lib",
-      "projectPath": "D:\\Chess\\Lib\\Lib.csproj",
-      "packagesPath": "C:\\Users\\DESKTOP\\.nuget\\packages\\",
-      "outputPath": "D:\\Chess\\Lib\\obj\\",
+      "projectPath": "C:\\Users\\User\\OneDrive\\Desktop\\Chess\\Lib\\Lib.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\OneDrive\\Desktop\\Chess\\Lib\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\DESKTOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
