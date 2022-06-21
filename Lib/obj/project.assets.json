@@ -218,8 +218,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vothu\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -227,16 +226,12 @@
       "projectUniqueName": "C:\\xampp\\htdocs\\Chess\\Lib\\Lib.csproj",
       "projectName": "Lib",
       "projectPath": "C:\\xampp\\htdocs\\Chess\\Lib\\Lib.csproj",
-      "packagesPath": "C:\\Users\\vothu\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
       "outputPath": "C:\\xampp\\htdocs\\Chess\\Lib\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\vothu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
