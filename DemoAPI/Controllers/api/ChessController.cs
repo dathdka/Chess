@@ -47,6 +47,11 @@ namespace DemoAPI.Controllers.api
             board[0, 8] = new xe("xeden2", 0, 8);
             board[9, 0] = new xe("xedo1", 9, 0);
             board[9, 8] = new xe("xedo2", 9, 8);
+            
+            board[0, 1] = new ma("maden1", 0, 1);
+            board[0, 7] = new ma("maden2", 0, 7);
+            board[9, 1] = new ma("mado1", 9, 1);
+            board[9, 7] = new ma("mado2", 9, 7);
         }
 
         ChessService chessService = new ChessService();
