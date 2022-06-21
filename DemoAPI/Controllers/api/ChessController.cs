@@ -18,6 +18,16 @@ namespace DemoAPI.Controllers.api
             board[2, 7] = new phao("phaoden2",2,7);
             board[7, 1] = new phao("phaodo1",7,1);
             board[7, 7] = new phao("phaodo2",7,7);
+            board[3, 0] = new tot("totden1", 3, 0);
+            board[3, 2] = new tot("totden2", 3, 2);
+            board[3, 4] = new tot("totden3", 3, 4);
+            board[3, 6] = new tot("totden4", 3, 6);
+            board[3, 8] = new tot("totden5", 3, 8);
+            board[6, 0] = new tot("totdo1", 6, 0);
+            board[6, 2] = new tot("totdo2", 6, 2);
+            board[6, 4] = new tot("totdo3", 6, 4);
+            board[6, 6] = new tot("totdo4", 6, 6);
+            board[6, 8] = new tot("totdo5", 6, 8);
         }
 
         ChessService chessService = new ChessService();
