@@ -11,7 +11,7 @@ namespace DemoAPI.Controllers.api
 {
     public class ChessController: Controller
     {
-        public MoveModel[,] board = new MoveModel[8,9];
+        public MoveModel[,] board = new MoveModel[10,9];
         public void Init ()
         {
             board[2, 1] = new phao("phaoden1",2,1);
@@ -32,6 +32,16 @@ namespace DemoAPI.Controllers.api
             board[6, 4] = new tot("totdo3", 6, 4);
             board[6, 6] = new tot("totdo4", 6, 6);
             board[6, 8] = new tot("totdo5", 6, 8);
+
+            board[0, 3] = new si("siden1", 0, 3);
+            board[0, 5] = new si("siden2", 0, 5); 
+            board[9, 3] = new si("sido1", 9, 3);
+            board[9, 5] = new si("sido2", 9, 5);
+
+            board[0, 2] = new tinh("tinhden1", 0, 2); 
+            board[0, 6] = new tinh("tinhden2", 0, 6); 
+            board[9, 2] = new tinh("tinhdo1", 9, 2); 
+            board[9, 6] = new tinh("tinhdo2", 9, 6);
         }
 
         ChessService chessService = new ChessService();
