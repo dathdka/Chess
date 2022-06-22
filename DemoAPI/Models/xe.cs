@@ -5,17 +5,21 @@ using System.Web;
 
 namespace DemoAPI.Models
 {
-    public class tuong : MoveModel
+    public class xe : MoveModel
     {
 
-        public tuong(string id, int x, int y)
+
+        public int x { get; set; }
+        public int y { get; set; }
+
+        public xe(string id, int x, int y)
         {
             this.x = x;
             this.y = y;
             this.id = id;
         }
-        public tuong() { }
-
+        public xe() { }
+        //check buoc di
         public MoveModel checkMove(MoveModel node)
         {
             if (isWithin(node.top) != -1 && isWithin(node.left) != -1)

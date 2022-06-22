@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DemoAPI"
+    "\\DemoAPI",
+    "\\DemoAPI\\Controllers",
+    "\\DemoAPI\\Controllers\\api"
   ],
-  "SelectedNode": "\\DemoAPI",
+  "SelectedNode": "\\DemoAPI\\Controllers\\api\\ChessController.cs",
   "PreviewInSolutionExplorer": false
 }

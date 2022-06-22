@@ -5,16 +5,18 @@ using System.Web;
 
 namespace DemoAPI.Models
 {
-    public class tuong : MoveModel
+    public class tinh : MoveModel
     {
+        public int x { get; set; }
+        public int y { get; set; }
 
-        public tuong(string id, int x, int y)
+        public tinh(string id, int x, int y)
         {
             this.x = x;
             this.y = y;
             this.id = id;
         }
-        public tuong() { }
+        public tinh() { }
 
         public MoveModel checkMove(MoveModel node)
         {

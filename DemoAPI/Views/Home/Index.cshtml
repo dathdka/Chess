@@ -37,12 +37,10 @@
         <input v-model="mess" type="text" id="mess" placeholder="nhap tin nhan" />
         <input v-on:click="sendMessage" type="button" value="Gui tin nhan" />
     </div>
-    <ul>
-        <li id="message"></li>
-    </ul>
-    <ul>
+    <textarea id="message"></textarea>
+    <p>
         {{ message }}
-    </ul>
+    </p>
     total record: {{total}}
     <input v-on:click="getTotal" type="button" value="get total" />
     List Student
