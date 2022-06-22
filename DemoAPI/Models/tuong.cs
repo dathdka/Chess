@@ -7,8 +7,6 @@ namespace DemoAPI.Models
 {
     public class tuong : MoveModel
     {
-        public int x { get; set; }
-        public int y { get; set; }
 
         public tuong(string id, int x, int y)
         {

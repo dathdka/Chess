@@ -14,13 +14,20 @@ namespace DemoAPI.Controllers.api
         public MoveModel[,] board = new MoveModel[10,9];
         public void Init ()
         {
+            for (int i = 0; i < 10; i++)
+            {
+                for(int j = 0;j <9; j++)
+                {
+                    board[i, j] = new MoveModel(i,j);
+
+                }
+            }
             board[2, 1] = new phao("phaoden1",2,1);
             board[2, 7] = new phao("phaoden2",2,7);
             board[7, 1] = new phao("phaodo1",7,1);
             board[7, 7] = new phao("phaodo2",7,7);
-
             board[0, 4] = new tuong("tuongden1", 0, 4);
-            board[9, 4] = new tuong("tuongdo1", 9, 4);
+            board[8, 4] = new tuong("tuongdo1", 9, 4);
 
             board[3, 0] = new tot("totden1", 3, 0);
             board[3, 2] = new tot("totden2", 3, 2);
@@ -101,14 +108,41 @@ namespace DemoAPI.Controllers.api
         [HttpPost]
         public ActionResult getMoveNode(List<MoveModel> movelist)
         {
+            MoveModel temp = new MoveModel();
             System.Web.Script.Serialization.JavaScriptSerializer js = new System.Web.Script.Serialization.JavaScriptSerializer();
-            phao t = new phao();
-            MoveModel temp =  t.checkMove(movelist.Last());
-            
+            //test
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    board[i, j] = new MoveModel(i, j);
+
+                }
+            }
+            board[2, 1] = new phao("phaoden2", 2, 1);
+            board[2, 7] = new phao("phaoden1", 2, 7);
+            board[7, 1] = new phao("phaodo1", 7, 1);
+            board[7, 7] = new phao("phaodo2", 7, 7);
+            board[0, 4] = new tuong("tuongden1", 0, 4);
+            board[8, 4] = new tuong("tuongdo1", 9, 4);
+            //end test
+            temp = temp.getId(movelist.Last(), this.board);
+            try {
+                
+                board[temp.x, temp.y] = board[temp.x, temp.y];
+                board[temp.x, temp.y] = new MoveModel();
+            }
+            catch(Exception)
+            {
+                temp.canMove = false;
+            }
+
             if (temp.canMove)
             {
                 movelist.Last().top = temp.top;
                 movelist.Last().left = temp.left;
+                board[temp.x, temp.y].curtop = temp.top;
+                board[temp.x, temp.y].curleft = temp.left;
                 Requestlog.PostToClient(js.Serialize(movelist));
                 return Json(new
                 {
