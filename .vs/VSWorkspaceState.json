@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
+<<<<<<< HEAD
     ""
   ],
   "SelectedNode": "\\DemoAPI.sln",
+=======
+    "",
+    "\\DemoAPI",
+    "\\DemoAPI\\Controllers",
+    "\\DemoAPI\\Controllers\\api"
+  ],
+  "SelectedNode": "\\DemoAPI\\Controllers\\api\\ChessController.cs",
+>>>>>>> 1779f49984af7f40c09f5c65a13b72953003ec18
   "PreviewInSolutionExplorer": false
 }
