@@ -202,6 +202,7 @@
     <Compile Include="Models\MoveModel.cs" />
     <Compile Include="Models\RoomModel.cs" />
     <Compile Include="Models\phao.cs" />
+    <Compile Include="Models\tuong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
