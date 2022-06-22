@@ -22,10 +22,23 @@
         height: 50px;
         position: relative;
     }
+
+    .position-relative {
+        position: relative;
+    }
+
+    .position-chatbox {
+        position: absolute;
+        right: 0;
+        top: 85px;
+    }
+
 </style>
 
 
-<div id="app">
+
+
+<div id="app" class="position-relative" >
     <div class="chessboard">
         <div v-for="item in chessNode" v-if="item !== null">
             <div :id="item.id" class="chessnode">
@@ -33,14 +46,22 @@
             </div>
         </div>
     </div>
-    <div>
-        <input v-model="mess" type="text" id="mess" placeholder="nhap tin nhan" />
-        <input v-on:click="sendMessage" type="button" value="Gui tin nhan" />
+    
+    <div class="position-chatbox">
+        <div>
+            <textarea id="message" style="height: 300px; width:300px">
+                @*<textarea>
+                {{ message }}
+            </textarea>*@
+            </textarea>
+        </div>
+
+        <form>
+            <input v-model="mess" type="text" id="mess" placeholder="nhap tin nhan" />
+            <input v-on:click="sendMessage" type="button" value="Gui tin nhan" />
+        </form>
     </div>
-    <textarea id="message"></textarea>
-    <p>
-        {{ message }}
-    </p>
+
     total record: {{total}}
     <input v-on:click="getTotal" type="button" value="get total" />
     List Student

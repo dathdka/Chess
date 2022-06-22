@@ -3,8 +3,10 @@
     "",
     "\\DemoAPI",
     "\\DemoAPI\\Controllers",
-    "\\DemoAPI\\Controllers\\api"
+    "\\DemoAPI\\Controllers\\api",
+    "\\DemoAPI\\Views",
+    "\\DemoAPI\\Views\\Home"
   ],
-  "SelectedNode": "\\DemoAPI\\Controllers\\api\\ChessController.cs",
+  "SelectedNode": "\\DemoAPI\\Web.config",
   "PreviewInSolutionExplorer": false
 }

@@ -199,6 +199,7 @@
     <Compile Include="Hub\Requestlog.cs" />
     <Compile Include="Models\ChessNode.cs" />
     <Compile Include="Models\ClassRoomModel.cs" />
+    <Compile Include="Models\ma.cs" />
     <Compile Include="Models\MoveModel.cs" />
     <Compile Include="Models\RoomModel.cs" />
     <Compile Include="Models\phao.cs" />
