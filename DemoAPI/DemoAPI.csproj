@@ -202,7 +202,15 @@
     <Compile Include="Models\MoveModel.cs" />
     <Compile Include="Models\RoomModel.cs" />
     <Compile Include="Models\phao.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\tuong.cs" />
+=======
+    <Compile Include="Models\si.cs" />
+    <Compile Include="Models\tinh.cs" />
+    <Compile Include="Models\tot.cs" />
+    <Compile Include="Models\tuong.cs" />
+    <Compile Include="Models\xe.cs" />
+>>>>>>> 78c82b63a6c7863b9de71bf86c39eaf0695a53b3
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
