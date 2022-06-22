@@ -36,12 +36,17 @@ namespace DemoAPI.Models
         }
         public int isWithin(int value)
         {
+            // tính số bước nhảy
             int step = value / 75;
+            // check số âm
             int isNegative = value > 0 ? 1 : -1;
+            // nếu số bước nhảy sắp tới ~ bước nhảy xa nhất thì trả về bước nhảy xa nhất
             if (Math.Abs(value) > Math.Abs(step) * 75 + 55)
                 return 75 * (step + 1 * isNegative);
+            // nếu số bước nhảy sắp tới ~ bước nhảy xa nhất - 1 thì trả về bước nhảy xa nhất -1
             else if (Math.Abs(value) <= Math.Abs(step) * 75 + 20)
                 return 75 * step;
+            //nếu bước nhảy nằm giữa 2 điểm thì trả về -1
             return -1;
         }
 
@@ -49,6 +54,7 @@ namespace DemoAPI.Models
         {
             phao phao = new phao();
             tuong tuong = new tuong();
+            //phân loại quân cờ
             switch (node.id)
             {
                 case "phaoden1":
