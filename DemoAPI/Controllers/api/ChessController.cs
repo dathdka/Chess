@@ -24,13 +24,13 @@ namespace DemoAPI.Controllers.api
 
                     }
                 }
-                board[2, 1] = new phao("phaoden2", 2, 1);
-                board[2, 7] = new phao("phaoden1", 2, 7);
-                board[7, 1] = new phao("phaodo1", 7, 1);
-                board[7, 7] = new phao("phaodo2", 7, 7);
+                board[2, 1] = new phao("phaoden2", 2, 1, false);
+                board[2, 7] = new phao("phaoden1", 2, 7 , false);
+                board[7, 1] = new phao("phaodo1", 7, 1, true);
+                board[7, 7] = new phao("phaodo2", 7, 7, true);
 
                 board[0, 4] = new tuong("tuongden1", 0, 4);
-                board[8, 4] = new tuong("tuongdo1", 9, 4);
+                board[9, 4] = new tuong("tuongdo1", 9, 4);
 
                 board[3, 0] = new tot("totden1", 3, 0);
                 board[3, 2] = new tot("totden2", 3, 2);
@@ -165,6 +165,8 @@ namespace DemoAPI.Controllers.api
                 nb[temp.x, temp.y].curleft = temp.left;
                 nb[temp.x, temp.y].x = temp.x;
                 nb[temp.x, temp.y].y = temp.y;
+                if(temp.kill != null)
+                    nb[temp.x, temp.y].kill = temp.kill;
                 nb[temp.x, temp.y].step = 0;
                 Session["arr"] = nb;
                 Requestlog.PostToClient(js.Serialize(movelist));
@@ -173,14 +175,16 @@ namespace DemoAPI.Controllers.api
                 {
                     message = true,
                     top = temp.top,
-                    left = temp.left
+                    left = temp.left,
+                    kill = temp.kill
 
                 }, JsonRequestBehavior.AllowGet);
             }
             movelist.Remove(movelist.Last());
             return Json(new
                 {
-                    message = false
+                    message = false,
+                    kill = temp.kill
                 }, JsonRequestBehavior.AllowGet);
         }
         [Route("api/chess/getMess")]

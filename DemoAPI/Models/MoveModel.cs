@@ -15,6 +15,9 @@ namespace DemoAPI.Models
         public int curleft { get; set; }
         public int x { get; set; }
         public int y { get; set; }
+        public bool isRed { get; set; }
+
+        public string kill { get; set; }
 
         public int step { get; set; }
 
@@ -32,6 +35,7 @@ namespace DemoAPI.Models
             this.curleft = 0;
             this.x = x;
             this.y = y;
+            this.isRed = false;
             this.step = 0;
         }
         public int isWithin(int value)

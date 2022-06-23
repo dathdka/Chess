@@ -172,8 +172,12 @@
                         console.log('drop  x=' + ui.position.top + '  y=' + ui.position.left);
                         console.log('end   x=' + response.data.top + '  y=' + response.data.left);
                         console.log(response.data.message);
+                        console.log(response.data.kill);
+                        this[this.hide] = response.data.kill;
+                        if (response.data.kill != null)
+                            document.getElementById(response.data.kill).style.visibility = "hidden"
                         this[this.revert] = response.data.message;
-
+                        //document.getElementById("tuongden").style.visibility = "hidden"
                     })
                         .catch(error => {
                             console.log(error)
