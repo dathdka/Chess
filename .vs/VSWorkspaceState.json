@@ -5,6 +5,6 @@
     "\\DemoAPI\\Views",
     "\\DemoAPI\\Views\\Home"
   ],
-  "SelectedNode": "\\DemoAPI\\Views\\Home\\Index.cshtml",
+  "SelectedNode": "\\DemoAPI\\Web.config",
   "PreviewInSolutionExplorer": false
 }

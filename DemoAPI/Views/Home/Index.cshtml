@@ -170,7 +170,7 @@
                     var res = axios.post('/api/chess/movenode', movelist).then(response => {
                         //this.chessRoom = response.data.data;
                         console.log('drop  x=' + ui.position.top + '  y=' + ui.position.left);
-                        console.log('end   x=' + response.data.top + '  y=' + response.data.left);
+                        console.log('end   x=' + response.data.top + '  y=' + response.data.left);                       
                         console.log(response.data.message);
                         console.log(response.data.kill);
                         this[this.hide] = response.data.kill;
