@@ -57,7 +57,7 @@
     
     <div class="position-chatbox">
         <div>
-            <textarea id="message" style="height: 300px; width:300px; word-break:break-word;" readonly="readonly" >
+            <textarea id="message" cols="35" rows="10" readonly="readonly" >
                 @*<textarea>
                 {{ message }}
             </textarea>*@
@@ -125,7 +125,7 @@
             sendMessage() {
                 var mess = document.getElementById("mess").value;
                 axios.post('/api/chess/getMess?mess=' + mess).then(Response => {
-                    document.getElementById("message").innerHTML += "<li>" + Response.data.message+ "</li>";
+                    document.getElementById("message").innerHTML += Response.data.message;
                 }).catch(error => {
                     console.log(error)
                 })
