@@ -223,11 +223,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Documents\\DemoAPI\\DemoAPI\\Lib\\Lib.csproj",
+      "projectUniqueName": "C:\\Users\\User\\OneDrive\\Desktop\\Chess\\Lib\\Lib.csproj",
       "projectName": "Lib",
-      "projectPath": "C:\\Users\\User\\Documents\\DemoAPI\\DemoAPI\\Lib\\Lib.csproj",
+      "projectPath": "C:\\Users\\User\\OneDrive\\Desktop\\Chess\\Lib\\Lib.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Documents\\DemoAPI\\DemoAPI\\Lib\\obj\\",
+      "outputPath": "C:\\Users\\User\\OneDrive\\Desktop\\Chess\\Lib\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [

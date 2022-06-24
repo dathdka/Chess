@@ -29,8 +29,8 @@ namespace DemoAPI.Controllers.api
                 board[7, 1] = new phao("phaodo1", 7, 1, true);
                 board[7, 7] = new phao("phaodo2", 7, 7, true);
 
-                board[0, 4] = new tuong("tuongden1", 0, 4);
-                board[9, 4] = new tuong("tuongdo1", 9, 4);
+                board[0, 4] = new tuong("tuongden", 0, 4,false);
+                board[9, 4] = new tuong("tuongdo", 9, 4,true);
 
                 board[3, 0] = new tot("totden1", 3, 0);
                 board[3, 2] = new tot("totden2", 3, 2);

@@ -69,6 +69,10 @@ namespace DemoAPI.Models
                     return phao.checkMove(node, board);
                 case "phaodo2":
                     return phao.checkMove(node, board);
+                case "tuongden":
+                    return tuong.checkMove(node, board);
+                case "tuongdo":
+                    return tuong.checkMove(node, board);
                 default:
                     node.canMove = false;
                     return node;
