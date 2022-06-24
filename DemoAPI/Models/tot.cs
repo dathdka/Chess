@@ -11,11 +11,12 @@ namespace DemoAPI.Models
         public int x { get; set; }
         public int y { get; set; }
 
-        public tot(string id, int x, int y)
+        public tot(string id, int x, int y, bool isRed)
         {
             this.x = x;
             this.y = y;
             this.id = id;
+            this.isRed = isRed;
         }
         public tot() { }
         //check buoc di

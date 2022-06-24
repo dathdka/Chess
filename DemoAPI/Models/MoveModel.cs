@@ -58,6 +58,7 @@ namespace DemoAPI.Models
         {
             phao phao = new phao();
             tuong tuong = new tuong();
+            si si = new si();
             //phân loại quân cờ
             switch (node.id)
             {
@@ -69,6 +70,14 @@ namespace DemoAPI.Models
                     return phao.checkMove(node, board);
                 case "phaodo2":
                     return phao.checkMove(node, board);
+                case "siden1":
+                    return si.checkMove(node, board);
+                case "siden2":
+                    return si.checkMove(node, board);
+                case "sido1":
+                    return si.checkMove(node, board);
+                case "sido2":
+                    return si.checkMove(node, board);
                 default:
                     node.canMove = false;
                     return node;
