@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\DemoAPI",
+    "\\DemoAPI\\Models",
     "\\DemoAPI\\Views",
     "\\DemoAPI\\Views\\Home"
   ],
-  "SelectedNode": "\\DemoAPI\\Web.config",
+  "SelectedNode": "\\DemoAPI\\Models\\tot.cs",
   "PreviewInSolutionExplorer": false
 }
