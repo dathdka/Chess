@@ -53,10 +53,10 @@ namespace DemoAPI.Controllers.api
                 board[9, 2] = new tinh("tinhdo1", 9, 2);
                 board[9, 6] = new tinh("tinhdo2", 9, 6);
 
-                board[0, 0] = new xe("xeden1", 0, 0);
-                board[0, 8] = new xe("xeden2", 0, 8);
-                board[9, 0] = new xe("xedo1", 9, 0);
-                board[9, 8] = new xe("xedo2", 9, 8);
+                board[0, 0] = new xe("xeden1", 0, 0, false);
+                board[0, 8] = new xe("xeden2", 0, 8, false);
+                board[9, 0] = new xe("xedo1", 9, 0, true);
+                board[9, 8] = new xe("xedo2", 9, 8, true);
 
                 board[0, 1] = new ma("maden1", 0, 1);
                 board[0, 7] = new ma("maden2", 0, 7);

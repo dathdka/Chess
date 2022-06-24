@@ -192,7 +192,7 @@ namespace DemoAPI.Models
                     return node;
                 }
                 // những trường hợp còn lại ko đi được
-                else 
+                else
                 {
                     node.canMove = false;
                     return node;
