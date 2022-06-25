@@ -1,12 +1,33 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "k5OWW21A6IontRldCSHWcAlCns+Ykw2BLAzanixHvV97OJ4PIW++8ICtgRmpC90OYGfMgixuDtMk4M97Cx7PFA==",
+=======
+<<<<<<< HEAD
+  "dgSpecHash": "LrAP6M6eyOwG+hjQvT3QVX2zBwIpc5MmDVkwlEmFpNTfcc5IYRY6FYn6bnSjLgrdq2TvClaZNVlBy2Mp2Ine5Q==",
+  "success": true,
+  "projectFilePath": "D:\\tailieu\\QLDA_1\\Lib\\Lib.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnet.identity.entityframework\\2.2.3\\microsoft.aspnet.identity.entityframework.2.2.3.nupkg.sha512"
+=======
+<<<<<<< HEAD
+  "dgSpecHash": "E+NLabb2VygCmrKGCU6k1DiDMtlaSav7N2PcNhUfFysM0aBhtCLs/0FZArMDLVWLf9j7HdarzY4KrSFf7y8SaQ==",
+>>>>>>> d44c8f5268ab8e281a98919717dfb44be6c691c2
   "success": true,
   "projectFilePath": "C:\\Users\\User\\Documents\\DemoAPI\\DemoAPI\\Lib\\Lib.csproj",
   "expectedPackageFiles": [
+<<<<<<< HEAD
     "C:\\Users\\User\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnet.identity.entityframework\\2.2.3\\microsoft.aspnet.identity.entityframework.2.2.3.nupkg.sha512"
+=======
+    "C:\\Users\\vothu\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
+    "C:\\Users\\vothu\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
+    "C:\\Users\\vothu\\.nuget\\packages\\microsoft.aspnet.identity.entityframework\\2.2.3\\microsoft.aspnet.identity.entityframework.2.2.3.nupkg.sha512"
+>>>>>>> main
+>>>>>>> d44c8f5268ab8e281a98919717dfb44be6c691c2
   ],
   "logs": []
 }

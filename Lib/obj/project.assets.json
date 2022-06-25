@@ -218,20 +218,56 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\User\\.nuget\\packages\\": {}
+=======
+<<<<<<< HEAD
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\vothu\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+>>>>>>> main
+>>>>>>> d44c8f5268ab8e281a98919717dfb44be6c691c2
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\User\\Documents\\DemoAPI\\DemoAPI\\Lib\\Lib.csproj",
+=======
+<<<<<<< HEAD
+      "projectUniqueName": "D:\\tailieu\\QLDA_1\\Lib\\Lib.csproj",
+      "projectName": "Lib",
+      "projectPath": "D:\\tailieu\\QLDA_1\\Lib\\Lib.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\tailieu\\QLDA_1\\Lib\\obj\\",
+=======
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\xampp\\htdocs\\Chess\\Lib\\Lib.csproj",
+>>>>>>> d44c8f5268ab8e281a98919717dfb44be6c691c2
       "projectName": "Lib",
       "projectPath": "C:\\Users\\User\\Documents\\DemoAPI\\DemoAPI\\Lib\\Lib.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+<<<<<<< HEAD
       "outputPath": "C:\\Users\\User\\Documents\\DemoAPI\\DemoAPI\\Lib\\obj\\",
+=======
+      "outputPath": "C:\\Users\\User\\OneDrive\\Desktop\\Chess\\Lib\\obj\\",
+>>>>>>> main
+>>>>>>> main
+>>>>>>> d44c8f5268ab8e281a98919717dfb44be6c691c2
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+<<<<<<< HEAD
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\vothu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> main
+>>>>>>> d44c8f5268ab8e281a98919717dfb44be6c691c2
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

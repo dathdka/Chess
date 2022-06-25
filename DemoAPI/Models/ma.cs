@@ -43,9 +43,14 @@ namespace DemoAPI.Models
                     node.y = curnode.y + 1;
                     node.top = isWithin(node.top);
                     node.left = isWithin(node.left);
-                    //check chan
-                    if (board[curnode.x + 2, curnode.y].GetType().ToString() != "DemoAPI.Models.MoveModel" &&
-                        board[curnode.x, curnode.y + 1].GetType().ToString() != "DemoAPI.Models.MoveModel")
+                    if (board[curnode.x + 1, curnode.y].GetType().ToString() != "DemoAPI.Models.MoveModel" &&
+                       board[curnode.x, curnode.y + 1].GetType().ToString() != "DemoAPI.Models.MoveModel")
+                    {
+                        node.canMove = false;
+                        return node;
+                    }
+                    if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
+                        && board[curnode.x, curnode.y].isRed == board[node.x, node.y].isRed)
                     {
                         node.canMove = false;
                         return node;
@@ -55,119 +60,239 @@ namespace DemoAPI.Models
                         board[curnode.x, curnode.y].isRed != board[node.x, node.y].isRed)
                     {
                         node.kill = board[node.x, node.y].id;
+
                     }
+                    
+                    //check chan
                     node.canMove = true;
                     return node;
                 }
-                //Khi top gi? nguyên và left t?ng thì quân c? ?i sang ph?i
-                if (curnode.curtop == isWithin(node.top) && curnode.curleft < isWithin(node.left))
+
+                //phai xuong
+                if (isWithin(node.top) - curnode.curtop == 75 && isWithin(node.left) - curnode.curleft == 150)
                 {
-                    node.step = Math.Abs(isWithin(node.left - curnode.curleft) / 75);
-                    node.y = curnode.y + Math.Abs(node.step);
-                    node.x = curnode.x;
+                    node.x = curnode.x + 1;
+                    node.y = curnode.y + 2;
                     node.top = isWithin(node.top);
                     node.left = isWithin(node.left);
-                    if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
-                        && board[node.x, node.y].isRed != board[curnode.x, curnode.y].isRed)
+                    if (board[curnode.x + 1, curnode.y].GetType().ToString() != "DemoAPI.Models.MoveModel" &&
+                       board[curnode.x, curnode.y + 1].GetType().ToString() != "DemoAPI.Models.MoveModel")
                     {
-                        int count = 0;
-                        for (int i = curnode.y + 1; i < node.y; i++)
-                        {
-                            if (board[node.x, i].GetType().ToString() != "DemoAPI.Models.MoveModel")
-                            {
-                                count += 1;
-                            }
-                        }
-                        if (count == 1)
-                        {
-                            node.kill = board[node.x, node.y].id;
-                            node.canMove = true;
-                        }
+                        node.canMove = false;
                         return node;
+                    }
+                    if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
+                        && board[curnode.x, curnode.y].isRed == board[node.x, node.y].isRed)
+                    {
+                        node.canMove = false;
+                        return node;
+                    }
+                    // check kill
+                    if (board[curnode.x, curnode.y].GetType().ToString() != "DemoAPI.Models.MoveModel" &&
+                        board[curnode.x, curnode.y].isRed != board[node.x, node.y].isRed)
+                    {
+                        node.kill = board[node.x, node.y].id;
+
                     }
 
-                    for (int i = curnode.y + 1; i <= node.y; i++)
-                    {
-                        if (board[node.x, i].GetType().ToString() != "DemoAPI.Models.MoveModel")
-                        {
-                            return node;
-                        }
-                    }
+                    //check chan
                     node.canMove = true;
                     return node;
                 }
-                //Khi top t?ng và left gi? nguyên thì quân c? ?i xu?ng
-                if (curnode.curtop < isWithin(node.top) && curnode.curleft == isWithin(node.left))
+
+                //xuong trai
+                if (isWithin(node.top) - curnode.curtop == 150 && isWithin(node.left) - curnode.curleft == -75)
                 {
-                    node.step = Math.Abs(isWithin(node.top - curnode.curtop)) / 75;
-                    node.y = curnode.y;
-                    node.x = curnode.x + Math.Abs(node.step);
+                    node.x = curnode.x + 2;
+                    node.y = curnode.y - 1;
                     node.top = isWithin(node.top);
                     node.left = isWithin(node.left);
-                    if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
-                        && board[node.x, node.y].isRed != board[curnode.x, curnode.y].isRed)
+                    if (board[curnode.x, curnode.y - 1].GetType().ToString() != "DemoAPI.Models.MoveModel" &&
+                        board[curnode.x + 1, curnode.y].GetType().ToString() != "DemoAPI.Models.MoveModel")
                     {
-                        int count = 0;
-                        for (int i = curnode.x + 1; i < node.x; i++)
-                        {
-                            if (board[i, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel")
-                            {
-                                count += 1;
-                            }
-                        }
-                        if (count == 1)
-                        {
-                            node.kill = board[node.x, node.y].id;
-                            node.canMove = true;
-                        }
+                        node.canMove = false;
                         return node;
                     }
-                    for (int i = curnode.x + 1; i <= node.x; i++)
+                    if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
+                        && board[curnode.x, curnode.y].isRed == board[node.x, node.y].isRed)
                     {
-                        if (board[i, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel")
-                        {
-                            return node;
-                        }
+                        node.canMove = false;
+                        return node;
                     }
+                    // check kill
+                    if (board[curnode.x, curnode.y].GetType().ToString() != "DemoAPI.Models.MoveModel" &&
+                        board[curnode.x, curnode.y].isRed != board[node.x, node.y].isRed)
+                    {
+                        node.kill = board[node.x, node.y].id;
+
+                    }
+
+                    //check chan
                     node.canMove = true;
                     return node;
                 }
-                //Khi top gi? nguyên và left t?ng thì quân c? ?i sang trái
-                if (curnode.curtop == isWithin(node.top) && curnode.curleft > isWithin(node.left))
+
+                //trai len
+                if (isWithin(node.top) - curnode.curtop == -75 && isWithin(node.left) - curnode.curleft == -150)
                 {
-                    node.step = Math.Abs(isWithin(node.left - curnode.curleft)) / 75;
-                    node.y = curnode.y - Math.Abs(node.step);
-                    node.x = curnode.x;
+                    node.x = curnode.x - 1;
+                    node.y = curnode.y - 2;
                     node.top = isWithin(node.top);
                     node.left = isWithin(node.left);
-                    if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
-                        && board[node.x, node.y].isRed != board[curnode.x, curnode.y].isRed)
+                    if (board[curnode.x - 1, curnode.y].GetType().ToString() != "DemoAPI.Models.MoveModel" &&
+                       board[curnode.x, curnode.y - 1].GetType().ToString() != "DemoAPI.Models.MoveModel")
                     {
-                        int count = 0;
-                        for (int i = curnode.y - 1; i > node.y; i--)
-                        {
-                            if (board[node.x, i].GetType().ToString() != "DemoAPI.Models.MoveModel")
-                            {
-                                count += 1;
-                            }
-                        }
-                        if (count == 1)
-                        {
-                            node.kill = board[node.x, node.y].id;
-                            node.canMove = true;
-                        }
+                        node.canMove = false;
                         return node;
                     }
-                    for (int i = curnode.y - 1; i >= node.y; i--)
+                    if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
+                        && board[curnode.x, curnode.y].isRed == board[node.x, node.y].isRed)
                     {
-                        if (board[node.x, i].GetType().ToString() != "DemoAPI.Models.MoveModel")
-                        {
-                            return node;
-                        }
+                        node.canMove = false;
+                        return node;
                     }
+                    // check kill
+                    if (board[curnode.x, curnode.y].GetType().ToString() != "DemoAPI.Models.MoveModel" &&
+                        board[curnode.x, curnode.y].isRed != board[node.x, node.y].isRed)
+                    {
+                        node.kill = board[node.x, node.y].id;
+
+                    }
+
+                    //check chan
                     node.canMove = true;
                     return node;
                 }
+
+
+                //len trai
+                if (isWithin(node.top) - curnode.curtop == -150 && isWithin(node.left) - curnode.curleft == -75)
+                {
+                    node.x = curnode.x - 2;
+                    node.y = curnode.y - 1;
+                    node.top = isWithin(node.top);
+                    node.left = isWithin(node.left);
+                    if (board[curnode.x , curnode.y - 1].GetType().ToString() != "DemoAPI.Models.MoveModel" &&
+                        board[curnode.x -1, curnode.y].GetType().ToString() != "DemoAPI.Models.MoveModel")
+                    {
+                        node.canMove = false;
+                        return node;
+                    }
+                    if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
+                        && board[curnode.x, curnode.y].isRed == board[node.x, node.y].isRed)
+                    {
+                        node.canMove = false;
+                        return node;
+                    }
+                    // check kill
+                    if (board[curnode.x, curnode.y].GetType().ToString() != "DemoAPI.Models.MoveModel" &&
+                        board[curnode.x, curnode.y].isRed != board[node.x, node.y].isRed)
+                    {
+                        node.kill = board[node.x, node.y].id;
+
+                    }
+
+                    //check chan
+                    node.canMove = true;
+                    return node;
+                }
+
+                //len phai
+                if (isWithin(node.top) - curnode.curtop == -150 && isWithin(node.left) - curnode.curleft == 75)
+                {
+                    node.x = curnode.x - 2;
+                    node.y = curnode.y + 1;
+                    node.top = isWithin(node.top);
+                    node.left = isWithin(node.left);
+                    if (board[curnode.x, curnode.y +1].GetType().ToString() != "DemoAPI.Models.MoveModel" &&
+                       board[curnode.x -1, curnode.y].GetType().ToString() != "DemoAPI.Models.MoveModel")
+                    {
+                        node.canMove = false;
+                        return node;
+                    }
+                    if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
+                        && board[curnode.x, curnode.y].isRed == board[node.x, node.y].isRed)
+                    {
+                        node.canMove = false;
+                        return node;
+                    }
+                    // check kill
+                    if (board[curnode.x, curnode.y].GetType().ToString() != "DemoAPI.Models.MoveModel" &&
+                        board[curnode.x, curnode.y].isRed != board[node.x, node.y].isRed)
+                    {
+                        node.kill = board[node.x, node.y].id;
+
+                    }
+
+                    //check chan
+                    node.canMove = true;
+                    return node;
+                }
+
+                //phai len
+                if (isWithin(node.top) - curnode.curtop == -75 && isWithin(node.left) - curnode.curleft == 150)
+                {
+                    node.x = curnode.x - 1;
+                    node.y = curnode.y + 2;
+                    node.top = isWithin(node.top);
+                    node.left = isWithin(node.left); 
+                    if (board[curnode.x, curnode.y + 1].GetType().ToString() != "DemoAPI.Models.MoveModel" &&
+                        board[curnode.x - 1, curnode.y].GetType().ToString() != "DemoAPI.Models.MoveModel")
+                    {
+                        node.canMove = false;
+                        return node;
+                    }
+                    if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
+                        && board[curnode.x, curnode.y].isRed == board[node.x, node.y].isRed)
+                    {
+                        node.canMove = false;
+                        return node;
+                    }
+                    // check kill
+                    if (board[curnode.x, curnode.y].GetType().ToString() != "DemoAPI.Models.MoveModel" &&
+                        board[curnode.x, curnode.y].isRed != board[node.x, node.y].isRed)
+                    {
+                        node.kill = board[node.x, node.y].id;
+
+                    }
+
+                    //check chan
+                    node.canMove = true;
+                    return node;
+                }
+
+                //trai xuong
+                if (isWithin(node.top) - curnode.curtop == 75 && isWithin(node.left) - curnode.curleft == -150)
+                {
+                    node.x = curnode.x + 1;
+                    node.y = curnode.y - 2;
+                    node.top = isWithin(node.top);
+                    node.left = isWithin(node.left);
+                    if (board[curnode.x, curnode.y - 1].GetType().ToString() != "DemoAPI.Models.MoveModel" &&
+                        board[curnode.x +1, curnode.y].GetType().ToString() != "DemoAPI.Models.MoveModel")
+                    {
+                        node.canMove = false;
+                        return node;
+                    }
+                    if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
+                        && board[curnode.x, curnode.y].isRed == board[node.x, node.y].isRed)
+                    {
+                        node.canMove = false;
+                        return node;
+                    }
+                    // check kill
+                    if (board[curnode.x, curnode.y].GetType().ToString() != "DemoAPI.Models.MoveModel" &&
+                        board[curnode.x, curnode.y].isRed != board[node.x, node.y].isRed)
+                    {
+                        node.kill = board[node.x, node.y].id;
+
+                    }
+
+                    //check chan
+                    node.canMove = true;
+                    return node;
+                }
+
                 // nh?ng tr??ng h?p còn l?i ko ?i ???c
                 else
                 {
