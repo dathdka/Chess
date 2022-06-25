@@ -58,6 +58,7 @@ namespace DemoAPI.Models
         {
             phao phao = new phao();
             tuong tuong = new tuong();
+            si si = new si();
             tot tot = new tot();
             ma ma = new ma();
             //phân loại quân cờ
@@ -71,6 +72,16 @@ namespace DemoAPI.Models
                     return phao.checkMove(node, board);
                 case "phaodo2":
                     return phao.checkMove(node, board);
+
+                case "siden1":
+                    return si.checkMove(node, board);
+                case "siden2":
+                    return si.checkMove(node, board);
+                case "sido1":
+                    return si.checkMove(node, board);
+                case "sido2":
+                    return si.checkMove(node, board);
+
                 case "totden1":
                     return tot.checkMove(node, board);
                 case "totden2":
@@ -99,6 +110,11 @@ namespace DemoAPI.Models
                     return ma.checkMove(node, board);
                 case "mado2":
                     return ma.checkMove(node, board);
+                case "tuongden":
+                    return tuong.checkMove(node, board);
+                case "tuongdo":
+                    return tuong.checkMove(node, board);
+
                 default:
                     node.canMove = false;
                     return node;
