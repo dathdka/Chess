@@ -13,6 +13,7 @@ namespace DemoAPI.Controllers.api
     {
 
         MoveModel[,] board = new MoveModel[10, 9];
+        public int turn = 1;
         public void init()
         {
             {
@@ -29,14 +30,24 @@ namespace DemoAPI.Controllers.api
                 board[7, 1] = new phao("phaodo1", 7, 1, true);
                 board[7, 7] = new phao("phaodo2", 7, 7, true);
 
+<<<<<<< HEAD
                 board[0, 4] = new tuong("tuongden1", 0, 4, false);
                 board[9, 4] = new tuong("tuongdo1", 9, 4, true);
+=======
+                board[0, 4] = new tuong("tuongden", 0, 4,false);
+                board[9, 4] = new tuong("tuongdo", 9, 4,true);
+>>>>>>> main
 
                 board[3, 0] = new tot("totden1", 3, 0, false);
                 board[3, 2] = new tot("totden2", 3, 2, false);
                 board[3, 4] = new tot("totden3", 3, 4, false);
                 board[3, 6] = new tot("totden4", 3, 6, false);
                 board[3, 8] = new tot("totden5", 3, 8, false);
+                board[3, 8] = new tot("totden1", 3, 8, false);
+                board[3, 6] = new tot("totden2", 3, 6, false);
+                board[3, 4] = new tot("totden3", 3, 4, false);
+                board[3, 2] = new tot("totden4", 3, 2, false);
+                board[3, 0] = new tot("totden5", 3, 0, false);
                 board[6, 0] = new tot("totdo1", 6, 0, true);
                 board[6, 2] = new tot("totdo2", 6, 2, true);
                 board[6, 4] = new tot("totdo3", 6, 4, true);
@@ -58,7 +69,11 @@ namespace DemoAPI.Controllers.api
                 board[9, 0] = new xe("xedo1", 9, 0, true);
                 board[9, 8] = new xe("xedo2", 9, 8, true);
 
+<<<<<<< HEAD
                 board[0, 1] = new ma("maden1", 0, 1, false);
+=======
+                board[0, 1] = new ma("maden1", 0, 1,false);
+>>>>>>> main
                 board[0, 7] = new ma("maden2", 0, 7, false);
                 board[9, 1] = new ma("mado1", 9, 1, true);
                 board[9, 7] = new ma("mado2", 9, 7, true);
@@ -104,9 +119,11 @@ namespace DemoAPI.Controllers.api
             {
                 init();
                 Session["arr"] = board;
+                
             }
-            
-            return Json(new
+            if (Session["turn"] == null)
+                Session["turn"] = turn;
+                return Json(new
             {
                 chessnode = chessnode
             }, JsonRequestBehavior.AllowGet);
@@ -119,11 +136,28 @@ namespace DemoAPI.Controllers.api
             System.Web.Script.Serialization.JavaScriptSerializer js = new System.Web.Script.Serialization.JavaScriptSerializer();
             int positionx = 0;
             int positiony = 0;
+            bool checkTurn;
             // lấy mảng trên session về
             MoveModel[,] nb = Session["arr"] as MoveModel[,];
             // phân loại và kiểm tra có đi được không
+            turn = int.Parse(Session["turn"].ToString());
+            checkTurn = turn % 2 != 0 ? true : false;
             temp = temp.getId(movelist.Last(), nb);
-            if(!temp.canMove)
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    if (nb[i, j].id == temp.id)
+                    {
+                        positionx = i;
+                        positiony = j;
+                        break;
+                    }
+                }
+            }
+            if (nb[positionx, positiony].isRed != checkTurn)
+                temp.canMove = false;
+            if (!temp.canMove)
             {
                 //nếu canMove = false thì revert
                 movelist.Remove(movelist.Last());
@@ -132,6 +166,7 @@ namespace DemoAPI.Controllers.api
                     message = false
                 }, JsonRequestBehavior.AllowGet);
             }
+
             try {
                 // tìm vị trí quân cờ hiện tại cần di chuyển
                 for (int i = 0; i< 10; i++)
@@ -146,9 +181,16 @@ namespace DemoAPI.Controllers.api
                         }
                     }
                 }
+                if (temp.canMove)
+                {
+                if (nb[positionx, positiony].isRed != checkTurn)
+                    temp.canMove = false;
                 // hoán đổi vị trí mới và cũ
                 nb[temp.x, temp.y] = nb[positionx, positiony];
                 nb[positionx, positiony] = new MoveModel();
+
+                }    
+                
             }
             catch(Exception)
             {
@@ -158,6 +200,7 @@ namespace DemoAPI.Controllers.api
 
             if (temp.canMove)
             {
+                turn += 1;
                 // lưu vị trí các quân cờ vừa thay đổi
                 movelist.Last().top = temp.top;
                 movelist.Last().left = temp.left;
@@ -169,6 +212,7 @@ namespace DemoAPI.Controllers.api
                     nb[temp.x, temp.y].kill = temp.kill;
                 nb[temp.x, temp.y].step = 0;
                 Session["arr"] = nb;
+                Session["turn"] = turn;
                 Requestlog.PostToClient(js.Serialize(movelist));
                 
                 return Json(new
@@ -176,7 +220,8 @@ namespace DemoAPI.Controllers.api
                     message = true,
                     top = temp.top,
                     left = temp.left,
-                    kill = temp.kill
+                    kill = temp.kill,
+                    turn = checkTurn
 
                 }, JsonRequestBehavior.AllowGet);
             }

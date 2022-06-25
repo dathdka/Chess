@@ -59,7 +59,12 @@ namespace DemoAPI.Models
             phao phao = new phao();
             tuong tuong = new tuong();
             si si = new si();
+<<<<<<< HEAD
             tinh tinh = new tinh();
+=======
+            tot tot = new tot();
+            ma ma = new ma();
+>>>>>>> main
             //phân loại quân cờ
             switch (node.id)
             {
@@ -71,6 +76,7 @@ namespace DemoAPI.Models
                     return phao.checkMove(node, board);
                 case "phaodo2":
                     return phao.checkMove(node, board);
+
                 case "siden1":
                     return si.checkMove(node, board);
                 case "siden2":
@@ -79,6 +85,7 @@ namespace DemoAPI.Models
                     return si.checkMove(node, board);
                 case "sido2":
                     return si.checkMove(node, board);
+<<<<<<< HEAD
                 case "tinhden1":
                     return tinh.checkMove(node, board);
                 case "tinhden2":
@@ -87,6 +94,42 @@ namespace DemoAPI.Models
                     return tinh.checkMove(node, board);
                 case "tinhdo2":
                     return tinh.checkMove(node, board);
+=======
+
+                case "totden1":
+                    return tot.checkMove(node, board);
+                case "totden2":
+                    return tot.checkMove(node, board);
+                case "totden3":
+                    return tot.checkMove(node, board);
+                case "totden4":
+                    return tot.checkMove(node, board);
+                case "totden5":
+                    return tot.checkMove(node, board);
+                case "totdo1":
+                    return tot.checkMove(node, board);
+                case "totdo2":
+                    return tot.checkMove(node, board);
+                case "totdo3":
+                    return tot.checkMove(node, board);
+                case "totdo4":
+                    return tot.checkMove(node, board);
+                case "totdo5":
+                    return tot.checkMove(node, board);
+                case "maden1":
+                    return ma.checkMove(node, board);
+                case "maden2":
+                    return ma.checkMove(node, board);
+                case "mado1":
+                    return ma.checkMove(node, board);
+                case "mado2":
+                    return ma.checkMove(node, board);
+                case "tuongden":
+                    return tuong.checkMove(node, board);
+                case "tuongdo":
+                    return tuong.checkMove(node, board);
+
+>>>>>>> main
                 default:
                     node.canMove = false;
                     return node;
