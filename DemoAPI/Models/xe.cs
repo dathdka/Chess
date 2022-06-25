@@ -12,7 +12,13 @@ namespace DemoAPI.Models
         public xe(string id, int x, int y, bool isRed)
 =======
 
+<<<<<<< HEAD
         public xe(string id, int x, int y)
+>>>>>>> main
+=======
+        public int x { get; set; }
+        public int y { get; set; }
+        public xe(string id, int x, int y, bool isRed)
 >>>>>>> main
         {
             this.x = x;

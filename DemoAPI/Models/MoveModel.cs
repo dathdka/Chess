@@ -62,6 +62,7 @@ namespace DemoAPI.Models
             xe xe = new xe();
 =======
             si si = new si();
+            tinh tinh = new tinh();
             tot tot = new tot();
             ma ma = new ma();
 >>>>>>> main
@@ -95,7 +96,14 @@ namespace DemoAPI.Models
                     return si.checkMove(node, board);
                 case "sido2":
                     return si.checkMove(node, board);
-
+                case "tinhden1":
+                    return tinh.checkMove(node, board);
+                case "tinhden2":
+                    return tinh.checkMove(node, board);
+                case "tinhdo1":
+                    return tinh.checkMove(node, board);
+                case "tinhdo2":
+                    return tinh.checkMove(node, board);
                 case "totden1":
                     return tot.checkMove(node, board);
                 case "totden2":
@@ -128,7 +136,10 @@ namespace DemoAPI.Models
                     return tuong.checkMove(node, board);
                 case "tuongdo":
                     return tuong.checkMove(node, board);
+<<<<<<< HEAD
 
+>>>>>>> main
+=======
 >>>>>>> main
                 default:
                     node.canMove = false;
