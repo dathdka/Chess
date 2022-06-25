@@ -52,9 +52,12 @@ namespace DemoAPI.Models
                     if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
                         && board[node.x, node.y].isRed != board[curnode.x, curnode.y].isRed)
                     {
-                            node.kill = board[node.x, node.y].id;
-                            node.canMove = true;
-                            return node;
+                        for (int i = curnode.x; i > node.x; i--)
+                        {
+                                node.kill = board[node.x, node.y].id;
+                                node.canMove = true;
+                                return node;
+                        }    
                     }
                     //Chặn bước nhảy của quân cờ khi có vật cản======
                     for (int i = curnode.x - 1; i >= node.x; i--)
@@ -80,11 +83,14 @@ namespace DemoAPI.Models
                     node.top = isWithin(node.top);
                     node.left = isWithin(node.left);
                     if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
-                        && board[node.x, node.y].isRed != board[curnode.x, curnode.y].isRed)
+                       && board[node.x, node.y].isRed != board[curnode.x, curnode.y].isRed)
                     {
-                            node.kill = board[node.x, node.y].id;
-                            node.canMove = true;
-                        return node;
+                        for (int i = curnode.y; i < node.y; i++)
+                        {
+                                node.kill = board[node.x, node.y].id;
+                                node.canMove = true;
+                                return node;
+                        }
                     }
 
                     for (int i = curnode.y + 1; i <= node.y; i++)
@@ -110,7 +116,7 @@ namespace DemoAPI.Models
                     {
                             node.kill = board[node.x, node.y].id;
                             node.canMove = true;
-                        return node;
+                            return node;
                     }
                     for (int i = curnode.x + 1; i <= node.x; i++)
                     {
