@@ -64,3 +64,14 @@ C:\xampp\htdocs\Chess\Lib\obj\Debug\Lib.csproj.CoreCompileInputs.cache
 C:\xampp\htdocs\Chess\Lib\obj\Debug\Lib.csproj.CopyComplete
 C:\xampp\htdocs\Chess\Lib\obj\Debug\Lib.dll
 C:\xampp\htdocs\Chess\Lib\obj\Debug\Lib.pdb
+C:\Users\User\OneDrive\Desktop\Chess\Lib\bin\Debug\Lib.dll
+C:\Users\User\OneDrive\Desktop\Chess\Lib\bin\Debug\Lib.pdb
+C:\Users\User\OneDrive\Desktop\Chess\Lib\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\OneDrive\Desktop\Chess\Lib\bin\Debug\EntityFramework.dll
+C:\Users\User\OneDrive\Desktop\Chess\Lib\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\User\OneDrive\Desktop\Chess\Lib\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\User\OneDrive\Desktop\Chess\Lib\obj\Debug\Lib.csproj.AssemblyReference.cache
+C:\Users\User\OneDrive\Desktop\Chess\Lib\obj\Debug\Lib.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\Desktop\Chess\Lib\obj\Debug\Lib.csproj.CopyComplete
+C:\Users\User\OneDrive\Desktop\Chess\Lib\obj\Debug\Lib.dll
+C:\Users\User\OneDrive\Desktop\Chess\Lib\obj\Debug\Lib.pdb
