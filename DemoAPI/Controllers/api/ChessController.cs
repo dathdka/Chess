@@ -30,13 +30,12 @@ namespace DemoAPI.Controllers.api
                 board[7, 1] = new phao("phaodo1", 7, 1, true);
                 board[7, 7] = new phao("phaodo2", 7, 7, true);
 
-<<<<<<< HEAD
+
                 board[0, 4] = new tuong("tuongden1", 0, 4, false);
                 board[9, 4] = new tuong("tuongdo1", 9, 4, true);
-=======
+
                 board[0, 4] = new tuong("tuongden", 0, 4,false);
                 board[9, 4] = new tuong("tuongdo", 9, 4,true);
->>>>>>> main
 
                 board[3, 0] = new tot("totden1", 3, 0, false);
                 board[3, 2] = new tot("totden2", 3, 2, false);
@@ -69,11 +68,8 @@ namespace DemoAPI.Controllers.api
                 board[9, 0] = new xe("xedo1", 9, 0, true);
                 board[9, 8] = new xe("xedo2", 9, 8, true);
 
-<<<<<<< HEAD
                 board[0, 1] = new ma("maden1", 0, 1, false);
-=======
                 board[0, 1] = new ma("maden1", 0, 1,false);
->>>>>>> main
                 board[0, 7] = new ma("maden2", 0, 7, false);
                 board[9, 1] = new ma("mado1", 9, 1, true);
                 board[9, 7] = new ma("mado2", 9, 7, true);

@@ -8,10 +8,6 @@ namespace DemoAPI.Models
     public class ma : MoveModel
     {
 
-<<<<<<< HEAD
-
-=======
->>>>>>> main
         public ma(string id, int x, int y, bool isRed)
         {
             this.x = x;

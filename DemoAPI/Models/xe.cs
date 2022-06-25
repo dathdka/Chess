@@ -9,14 +9,9 @@ namespace DemoAPI.Models
     {
 
 
-<<<<<<< HEAD
         public int x { get; set; }
         public int y { get; set; }
-
         public xe(string id, int x, int y, bool isRed)
-=======
-        public xe(string id, int x, int y)
->>>>>>> main
         {
             this.x = x;
             this.y = y;
