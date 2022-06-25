@@ -2,10 +2,17 @@
   "ExpandedNodes": [
     "",
     "\\DemoAPI",
+<<<<<<< HEAD
+    "\\DemoAPI\\Views",
+    "\\DemoAPI\\Views\\Home"
+  ],
+  "SelectedNode": "\\DemoAPI\\Views\\Home\\Index.cshtml",
+=======
     "\\DemoAPI\\Models",
     "\\DemoAPI\\Views",
     "\\DemoAPI\\Views\\Home"
   ],
   "SelectedNode": "\\DemoAPI\\Models\\tot.cs",
+>>>>>>> main
   "PreviewInSolutionExplorer": false
 }

@@ -8,6 +8,12 @@ namespace DemoAPI.Models
 
     public class tot : MoveModel
     {
+<<<<<<< HEAD
+        public int x { get; set; }
+        public int y { get; set; }
+
+=======
+>>>>>>> main
         public tot(string id, int x, int y, bool isRed)
         {
             this.x = x;

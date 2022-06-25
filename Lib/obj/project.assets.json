@@ -218,20 +218,33 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\vothu\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\xampp\\htdocs\\Chess\\Lib\\Lib.csproj",
+      "projectName": "Lib",
+      "projectPath": "C:\\xampp\\htdocs\\Chess\\Lib\\Lib.csproj",
+      "packagesPath": "C:\\Users\\vothu\\.nuget\\packages\\",
+      "outputPath": "C:\\xampp\\htdocs\\Chess\\Lib\\obj\\",
+=======
       "projectUniqueName": "C:\\Users\\User\\OneDrive\\Desktop\\Chess\\Lib\\Lib.csproj",
       "projectName": "Lib",
       "projectPath": "C:\\Users\\User\\OneDrive\\Desktop\\Chess\\Lib\\Lib.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User\\OneDrive\\Desktop\\Chess\\Lib\\obj\\",
+>>>>>>> main
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vothu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
