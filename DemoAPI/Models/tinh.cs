@@ -57,10 +57,10 @@ namespace DemoAPI.Models
                             return node;
                         }
                     //Chặn đi 1 nước
-                    //if(node.x == curnode.x -2 && node.y == curnode.y + 2)
+                    //if(node.x == curnode.x - 2 && node.y == curnode.y + 1)
                     //{
                     //    return node;
-                    //}
+                    //}  
          
                     //cấm qua sông 
                     if (curnode.isRed == true && node.x < 5)
@@ -153,7 +153,7 @@ namespace DemoAPI.Models
                         return node;
                     }
                     //Chặn đi 1 nước
-                    //if (node.x == curnode.x - 2 && node.y == curnode.y - 2)
+                    //if (node.x == curnode.x - 2 && node.y == curnode.y + 1)
                     //{
                     //    return node;
                     //}
