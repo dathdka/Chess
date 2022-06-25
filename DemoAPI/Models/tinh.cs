@@ -344,6 +344,7 @@ namespace DemoAPI.Models
                     //Chặn đi 1 nước
                     //if (node.y == curnode.y + 1)
                     //{
+                    //        
                     //    return node;
                     //}
                     //cấm qua sông 
