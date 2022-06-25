@@ -7,8 +7,6 @@ namespace DemoAPI.Models
 {
     public class tinh : MoveModel
     {
-        public int x { get; set; }
-        public int y { get; set; }
 
         public tinh(string id, int x, int y)
         {

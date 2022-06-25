@@ -9,9 +9,6 @@ namespace DemoAPI.Models
     {
 
 
-        public int x { get; set; }
-        public int y { get; set; }
-
         public xe(string id, int x, int y)
         {
             this.x = x;

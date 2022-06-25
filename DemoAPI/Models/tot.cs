@@ -8,8 +8,7 @@ namespace DemoAPI.Models
 
     public class tot : MoveModel
     {
-        public int x { get; set; }
-        public int y { get; set; }
+
 
         public tot(string id, int x, int y, bool isRed)
         {
