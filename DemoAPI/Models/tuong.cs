@@ -54,9 +54,13 @@ namespace DemoAPI.Models
                     if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
                         && board[node.x, node.y].isRed != board[curnode.x, curnode.y].isRed)
                     {
-                        node.kill = board[node.x, node.y].id;
-                        node.canMove = true;
-                        return node;
+                        for (int i = curnode.x - 1; i > node.x; i--)
+                        {
+
+                            node.kill = board[node.x, node.y].id;
+                            node.canMove = true;
+                            return node;
+                        }
                     }
                     //Chặn bước nhảy của quân cờ khi có vật cản======
                     for (int i = curnode.x - 1; i >= node.x; i--)
@@ -73,6 +77,7 @@ namespace DemoAPI.Models
                     node.canMove = true;
                     return node;
                 }
+
                 //Khi top giữ nguyên và left tăng thì quân cờ đi sang phải
                 if (curnode.curtop == isWithin(node.top) && (curnode.curleft - isWithin(node.left)) / 75 == 1
                         && curnode.curleft > -75)
@@ -85,9 +90,12 @@ namespace DemoAPI.Models
                     if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
                         && board[node.x, node.y].isRed != board[curnode.x, curnode.y].isRed)
                     {
-                        node.kill = board[node.x, node.y].id;
-                        node.canMove = true;
-                        return node;
+                        for (int i = curnode.x - 1; i > node.x; i--)
+                        {
+                            node.kill = board[node.x, node.y].id;
+                            node.canMove = true;
+                            return node;
+                        }
                     }
 
                     for (int i = curnode.y + 1; i <= node.y; i++)
@@ -112,9 +120,13 @@ namespace DemoAPI.Models
                     if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
                         && board[node.x, node.y].isRed != board[curnode.x, curnode.y].isRed)
                     {
-                        node.kill = board[node.x, node.y].id;
-                        node.canMove = true;
-                        return node;
+                        for (int i = curnode.x - 1; i > node.x; i--)
+                        {
+
+                            node.kill = board[node.x, node.y].id;
+                            node.canMove = true;
+                            return node;
+                        }
                     }
                     for (int i = curnode.x + 1; i <= node.x; i++)
                     {
@@ -138,9 +150,12 @@ namespace DemoAPI.Models
                     if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
                         && board[node.x, node.y].isRed != board[curnode.x, curnode.y].isRed)
                     {
-                        node.kill = board[node.x, node.y].id;
-                        node.canMove = true;
-                        return node;
+                        for (int i = curnode.x - 1; i > node.x; i--)
+                        {
+                            node.kill = board[node.x, node.y].id;
+                            node.canMove = true;
+                            return node;
+                        }
                     }
                     for (int i = curnode.y - 1; i >= node.y; i--)
                     {
