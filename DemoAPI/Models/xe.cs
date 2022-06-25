@@ -54,7 +54,7 @@ namespace DemoAPI.Models
                     {
                             node.kill = board[node.x, node.y].id;
                             node.canMove = true;
-                        return node;
+                            return node;
                     }
                     //Chặn bước nhảy của quân cờ khi có vật cản======
                     for (int i = curnode.x - 1; i >= node.x; i--)
@@ -135,7 +135,7 @@ namespace DemoAPI.Models
                     {
                             node.kill = board[node.x, node.y].id;
                             node.canMove = true;
-                        return node;
+                            return node;
                     }
                     for (int i = curnode.y - 1; i >= node.y; i--)
                     {
