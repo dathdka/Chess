@@ -61,6 +61,7 @@ namespace DemoAPI.Models
                     //{
                     //    return node;
                     //}
+         
                     //cấm qua sông 
                     if (curnode.isRed == true && node.x < 5)
                     {
