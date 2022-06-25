@@ -9,11 +9,14 @@ namespace DemoAPI.Models
     {
 
 
-        public xe(string id, int x, int y)
+        public int x { get; set; }
+        public int y { get; set; }
+        public xe(string id, int x, int y, bool isRed)
         {
             this.x = x;
             this.y = y;
             this.id = id;
+            this.isRed = isRed;
         }
         public xe() { }
         //check buoc di

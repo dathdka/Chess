@@ -37,7 +37,6 @@ namespace DemoAPI.Models
                 //Khi top giảm và left giữ tăng  thì quân cờ đi lên bên phải 
                 if (curnode.curtop > isWithin(node.top) && curnode.curleft < isWithin(node.left))
                 {
-                    
                     node.step = Math.Abs(isWithin(node.top - curnode.curtop) / 75);
                     if(node.step > 1)
                     {
