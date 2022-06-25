@@ -64,3 +64,14 @@ C:\xampp\htdocs\Chess\Lib\obj\Debug\Lib.csproj.CoreCompileInputs.cache
 C:\xampp\htdocs\Chess\Lib\obj\Debug\Lib.csproj.CopyComplete
 C:\xampp\htdocs\Chess\Lib\obj\Debug\Lib.dll
 C:\xampp\htdocs\Chess\Lib\obj\Debug\Lib.pdb
+D:\tailieu\QLDA_1\Lib\bin\Debug\Lib.dll
+D:\tailieu\QLDA_1\Lib\bin\Debug\Lib.pdb
+D:\tailieu\QLDA_1\Lib\bin\Debug\EntityFramework.SqlServer.dll
+D:\tailieu\QLDA_1\Lib\bin\Debug\EntityFramework.dll
+D:\tailieu\QLDA_1\Lib\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\tailieu\QLDA_1\Lib\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\tailieu\QLDA_1\Lib\obj\Debug\Lib.csproj.AssemblyReference.cache
+D:\tailieu\QLDA_1\Lib\obj\Debug\Lib.csproj.CoreCompileInputs.cache
+D:\tailieu\QLDA_1\Lib\obj\Debug\Lib.csproj.CopyComplete
+D:\tailieu\QLDA_1\Lib\obj\Debug\Lib.dll
+D:\tailieu\QLDA_1\Lib\obj\Debug\Lib.pdb
