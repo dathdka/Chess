@@ -58,6 +58,7 @@ namespace DemoAPI.Models
         {
             phao phao = new phao();
             tuong tuong = new tuong();
+            xe xe = new xe();
             si si = new si();
             tinh tinh = new tinh();
             tot tot = new tot();
@@ -73,7 +74,14 @@ namespace DemoAPI.Models
                     return phao.checkMove(node, board);
                 case "phaodo2":
                     return phao.checkMove(node, board);
-
+                case "xeden1":
+                    return xe.checkMove(node, board);
+                case "xeden2":
+                    return xe.checkMove(node, board);
+                case "xedo1":
+                    return xe.checkMove(node, board);
+                case "xedo2":
+                    return xe.checkMove(node, board);
                 case "siden1":
                     return si.checkMove(node, board);
                 case "siden2":
