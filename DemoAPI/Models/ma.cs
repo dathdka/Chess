@@ -43,18 +43,18 @@ namespace DemoAPI.Models
                     node.y = curnode.y + 1;
                     node.top = isWithin(node.top);
                     node.left = isWithin(node.left);
-                    //check chan
-                    if (board[curnode.x + 2, curnode.y].GetType().ToString() != "DemoAPI.Models.MoveModel" &&
-                        board[curnode.x, curnode.y + 1].GetType().ToString() != "DemoAPI.Models.MoveModel")
-                    {
-                        node.canMove = false;
-                        return node;
-                    }
                     // check kill
                     if (board[curnode.x, curnode.y].GetType().ToString() != "DemoAPI.Models.MoveModel" &&
                         board[curnode.x, curnode.y].isRed != board[node.x, node.y].isRed)
                     {
                         node.kill = board[node.x, node.y].id;
+                    }
+                    //check chan
+                    if (board[curnode.x + 1, curnode.y].GetType().ToString() != "DemoAPI.Models.MoveModel" &&
+                        board[curnode.x, curnode.y + 1].GetType().ToString() != "DemoAPI.Models.MoveModel")
+                    {
+                        node.canMove = false;
+                        return node;
                     }
                     node.canMove = true;
                     return node;
