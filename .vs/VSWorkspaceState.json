@@ -1,19 +1,11 @@
 {
   "ExpandedNodes": [
-
-    ""
-  ],
-  "SelectedNode": "\\DemoAPI.sln",  
     "",
     "\\DemoAPI",
-    "\\DemoAPI\\Controllers",
-    "\\DemoAPI\\Controllers\\api",
+    "\\DemoAPI\\Models",
     "\\DemoAPI\\Views",
     "\\DemoAPI\\Views\\Home"
   ],
-
-  "SelectedNode": "\\DemoAPI\\Web.config",
-  "SelectedNode": "\\DemoAPI\\Controllers\\api\\ChessController.cs",
-
+  "SelectedNode": "\\DemoAPI\\Models\\tot.cs",
   "PreviewInSolutionExplorer": false
 }
