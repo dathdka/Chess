@@ -7,14 +7,14 @@ namespace DemoAPI.Models
 {
     public class ma : MoveModel
     {
-        public int x { get; set; }
-        public int y { get; set; }
 
-        public ma(string id, int x, int y)
+
+        public ma(string id, int x, int y, bool isRed)
         {
             this.x = x;
             this.y = y;
             this.id = id;
+            this.isRed = isRed;
         }
         public ma() { }
         //check buoc di

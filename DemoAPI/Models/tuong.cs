@@ -8,11 +8,12 @@ namespace DemoAPI.Models
     public class tuong : MoveModel
     {
 
-        public tuong(string id, int x, int y)
+        public tuong(string id, int x, int y, bool isRed)
         {
             this.x = x;
             this.y = y;
             this.id = id;
+            this.isRed = isRed;
         }
         public tuong() { }
 

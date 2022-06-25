@@ -29,8 +29,8 @@ namespace DemoAPI.Controllers.api
                 board[7, 1] = new phao("phaodo1", 7, 1, true);
                 board[7, 7] = new phao("phaodo2", 7, 7, true);
 
-                board[0, 4] = new tuong("tuongden1", 0, 4);
-                board[9, 4] = new tuong("tuongdo1", 9, 4);
+                board[0, 4] = new tuong("tuongden1", 0, 4, false);
+                board[9, 4] = new tuong("tuongdo1", 9, 4, true);
 
                 board[3, 0] = new tot("totden1", 3, 0, false);
                 board[3, 2] = new tot("totden2", 3, 2, false);
@@ -48,20 +48,20 @@ namespace DemoAPI.Controllers.api
                 board[9, 3] = new si("sido1", 9, 3, true);
                 board[9, 5] = new si("sido2", 9, 5, true);
 
-                board[0, 2] = new tinh("tinhden1", 0, 2);
-                board[0, 6] = new tinh("tinhden2", 0, 6);
-                board[9, 2] = new tinh("tinhdo1", 9, 2);
-                board[9, 6] = new tinh("tinhdo2", 9, 6);
+                board[0, 2] = new tinh("tinhden1", 0, 2, false);
+                board[0, 6] = new tinh("tinhden2", 0, 6, false);
+                board[9, 2] = new tinh("tinhdo1", 9, 2, true);
+                board[9, 6] = new tinh("tinhdo2", 9, 6, true);
 
-                board[0, 0] = new xe("xeden1", 0, 0);
-                board[0, 8] = new xe("xeden2", 0, 8);
-                board[9, 0] = new xe("xedo1", 9, 0);
-                board[9, 8] = new xe("xedo2", 9, 8);
+                board[0, 0] = new xe("xeden1", 0, 0, false);
+                board[0, 8] = new xe("xeden2", 0, 8, false);
+                board[9, 0] = new xe("xedo1", 9, 0, true);
+                board[9, 8] = new xe("xedo2", 9, 8, true);
 
-                board[0, 1] = new ma("maden1", 0, 1);
-                board[0, 7] = new ma("maden2", 0, 7);
-                board[9, 1] = new ma("mado1", 9, 1);
-                board[9, 7] = new ma("mado2", 9, 7);
+                board[0, 1] = new ma("maden1", 0, 1, false);
+                board[0, 7] = new ma("maden2", 0, 7, false);
+                board[9, 1] = new ma("mado1", 9, 1, true);
+                board[9, 7] = new ma("mado2", 9, 7, true);
             }
         }
         ChessService chessService = new ChessService();
