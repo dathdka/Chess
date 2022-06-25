@@ -55,6 +55,9 @@
         </div>
     </div>
     
+    <div id="turn">
+        
+    </div>
     <div class="position-chatbox">
         <div>
             <textarea id="message" cols="35" rows="10" readonly="readonly" >
@@ -170,9 +173,14 @@
                     var res = axios.post('/api/chess/movenode', movelist).then(response => {
                         //this.chessRoom = response.data.data;
                         console.log('drop  x=' + ui.position.top + '  y=' + ui.position.left);
-                        console.log('end   x=' + response.data.top + '  y=' + response.data.left);
+                        console.log('end   x=' + response.data.top + '  y=' + response.data.left);                       
                         console.log(response.data.message);
+                        if (response.data.turn)
+                            document.getElementById("message").innerHTML = "Đỏ"
+                        else
+                            document.getElementById("message").innerHTML = "Đen"
                         console.log(response.data.kill);
+                        
                         this[this.hide] = response.data.kill;
                         if (response.data.kill != null)
                             document.getElementById(response.data.kill).style.visibility = "hidden"

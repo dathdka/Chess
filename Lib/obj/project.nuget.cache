@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "WRmyehXJ3EXzCozPA+btexzf3mtALLG5eaqSraXS5Y0v/YdR902JPlhljVfpe+Qi8GIVHkfK/1snlzso+FQa4w==",
   "success": true,
   "projectFilePath": "C:\\xampp\\htdocs\\Chess\\Lib\\Lib.csproj",
@@ -7,6 +8,15 @@
     "C:\\Users\\ADMIN\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnet.identity.entityframework\\2.2.3\\microsoft.aspnet.identity.entityframework.2.2.3.nupkg.sha512"
+=======
+  "dgSpecHash": "E+NLabb2VygCmrKGCU6k1DiDMtlaSav7N2PcNhUfFysM0aBhtCLs/0FZArMDLVWLf9j7HdarzY4KrSFf7y8SaQ==",
+  "success": true,
+  "projectFilePath": "C:\\xampp\\htdocs\\Chess\\Lib\\Lib.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vothu\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
+    "C:\\Users\\vothu\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
+    "C:\\Users\\vothu\\.nuget\\packages\\microsoft.aspnet.identity.entityframework\\2.2.3\\microsoft.aspnet.identity.entityframework.2.2.3.nupkg.sha512"
+>>>>>>> main
   ],
   "logs": []
 }

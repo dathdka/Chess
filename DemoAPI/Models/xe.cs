@@ -8,7 +8,12 @@ namespace DemoAPI.Models
     public class xe : MoveModel
     {
 
+<<<<<<< HEAD
         public xe(string id, int x, int y, bool isRed)
+=======
+
+        public xe(string id, int x, int y)
+>>>>>>> main
         {
             this.x = x;
             this.y = y;
