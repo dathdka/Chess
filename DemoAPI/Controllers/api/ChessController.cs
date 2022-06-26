@@ -104,6 +104,19 @@ namespace DemoAPI.Controllers.api
                 data = roomList //_dbContext.Student.OrderBy(s=>s.Id).Skip(2).Take(3).ToList() //Where(s=>s.Id == Guid.Parse(id)).FirstOrDefault()
             }, JsonRequestBehavior.AllowGet);
         }
+        [Route("api/chess/reload")]
+        [HttpPost]
+        public ActionResult getReload()
+        {
+            Session["arr"] = null;
+            Session["turn"] = null;
+            return Json(new
+            {
+                message = "succeed"
+            }, JsonRequestBehavior.AllowGet);
+        }
+
+
         [Route("api/chess/getchessnode")]
         [HttpPost]
         public ActionResult getAllNode(List<MoveModel> movelist)

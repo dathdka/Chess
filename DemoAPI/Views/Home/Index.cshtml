@@ -185,6 +185,18 @@
                         if (response.data.kill != null)
                             document.getElementById(response.data.kill).style.visibility = "hidden"
                         this[this.revert] = response.data.message;
+                        if (document.getElementById(response.data.kill) == document.getElementById("tuongden")) {
+                            alert("Đỏ thắng!");
+                            var res = axios.post('/api/chess/reload').then(response => {
+                                window.location.reload();
+                            })
+                        }
+                        if (document.getElementById(response.data.kill) == document.getElementById("tuongdo")) {
+                            alert("Đen thắng!");
+                            var res = axios.post('/api/chess/reload').then(response => {
+                                window.location.reload();
+                            })
+                        }
                         //document.getElementById("tuongden").style.visibility = "hidden"
                     })
                         .catch(error => {
