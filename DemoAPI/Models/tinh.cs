@@ -57,11 +57,27 @@ namespace DemoAPI.Models
                             return node;
                         }
                     //Chặn đi 1 nước
-                    //if(node.x == curnode.x - 2 && node.y == curnode.y + 1)
-                    //{
-                    //    return node;
-                    //}  
-         
+                    if (node.left == curnode.curleft + 75 || node.left == curnode.curleft - 75)
+                    {
+                        if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
+                        && board[node.x, node.y].isRed != board[curnode.x, curnode.y].isRed && node.x >= 5)
+                        {
+                            int count = 0;
+
+                            if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel")
+                            {
+                                count += 1;
+                            }
+
+                            if (count == 1)
+                            {
+                                node.canMove = false;
+                            }
+                            return node;
+                        }
+                        return node;
+                    }
+
                     //cấm qua sông 
                     if (curnode.isRed == true && node.x < 5)
                     {
@@ -153,10 +169,26 @@ namespace DemoAPI.Models
                         return node;
                     }
                     //Chặn đi 1 nước
-                    //if (node.x == curnode.x - 2 && node.y == curnode.y + 1)
-                    //{
-                    //    return node;
-                    //}
+                    if (node.left == curnode.curleft + 75 || node.left == curnode.curleft - 75)
+                    {
+                        if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
+                        && board[node.x, node.y].isRed != board[curnode.x, curnode.y].isRed && node.x >= 5)
+                        {
+                            int count = 0;
+
+                            if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel")
+                            {
+                                count += 1;
+                            }
+
+                            if (count == 1)
+                            {
+                                node.canMove = false;
+                            }
+                            return node;
+                        }
+                        return node;
+                    }
                     //cấm qua sông 
                     if (curnode.isRed == true && node.x < 5)
                     {
@@ -245,12 +277,28 @@ namespace DemoAPI.Models
                     {
                         return node;
                     }
-                    
+
                     //Chặn đi 1 nước
-                    //if (node.y == curnode.y - 1)
-                    //{
-                    //    return node;
-                    //}
+                    if (node.left == curnode.curleft + 75 || node.left == curnode.curleft - 75)
+                    {
+                        if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
+                        && board[node.x, node.y].isRed != board[curnode.x, curnode.y].isRed && node.x >= 5)
+                        {
+                            int count = 0;
+
+                            if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel")
+                            {
+                                count += 1;
+                            }
+
+                            if (count == 1)
+                            {
+                                node.canMove = false;
+                            }
+                            return node;
+                        }
+                        return node;
+                    }
                     //cấm qua sông 
                     if (curnode.isRed == true && node.x < 5)
                     {
@@ -342,11 +390,26 @@ namespace DemoAPI.Models
                         return node;
                     }
                     //Chặn đi 1 nước
-                    //if (node.y == curnode.y + 1)
-                    //{
-                    //        
-                    //    return node;
-                    //}
+                    if (node.left == curnode.curleft + 75 || node.left == curnode.curleft - 75)
+                    {
+                        if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel"
+                        && board[node.x, node.y].isRed != board[curnode.x, curnode.y].isRed && node.x >= 5)
+                        {
+                            int count = 0;
+
+                            if (board[node.x, node.y].GetType().ToString() != "DemoAPI.Models.MoveModel")
+                            {
+                                count += 1;
+                            }
+
+                            if (count == 1)
+                            {
+                                node.canMove = false;
+                            }
+                            return node;
+                        }
+                        return node;
+                    }
                     //cấm qua sông 
                     if (curnode.isRed == true && node.x < 5)
                     {
